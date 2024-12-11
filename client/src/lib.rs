@@ -668,7 +668,7 @@ impl<'a, C: Deref<Target = impl Signer> + Clone, S: AsSigner> RequestBuilder<'a,
     }
 }
 
-fn parse_logs_response<T: anchor_lang::Event + anchor_lang::AnchorDeserialize>(
+pub fn parse_logs_response<T: anchor_lang::Event + anchor_lang::AnchorDeserialize>(
     logs: RpcResponse<RpcLogsResponse>,
     program_id_str: &str,
 ) -> Vec<T> {
