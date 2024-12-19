@@ -83,6 +83,7 @@ fn gen_event(idl: &Idl) -> proc_macro2::TokenStream {
         /// An enum that includes all events of the declared program as a tuple variant.
         ///
         /// See [`Self::try_from_bytes`] to create an instance from bytes.
+        #[derive(Debug)]
         pub enum Event {
             #(#variants,)*
         }
